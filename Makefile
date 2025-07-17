@@ -15,3 +15,9 @@ seed:
 
 test:
 	PYTHONPATH=. pytest tests 
+
+run-all:
+	uvicorn backend.main:app --reload & streamlit run streamlit_app.py 
+
+run-streamlit:
+	streamlit run streamlit_app.py 

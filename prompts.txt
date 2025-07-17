@@ -50,3 +50,5 @@ Key fixes and requirements since the last prompt:
 - requirements.txt includes all necessary dependencies for development and testing.
 
 With these steps and fixes, a new user can clone the repo, install dependencies, run migrations, and immediately run the app and tests successfully. 
+
+Create a streamlit application to make the login, create features, list all features and upvote handling with the errors from api in a kind ui for user. The application should be fast, for that use cache on list features call but everytime that upvote or create a new feature should erase this cache. Add the necessary dependency on requirements. 
