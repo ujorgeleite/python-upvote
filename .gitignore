@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+.env
+
+# SQLite database
+feature_voting.db
+
+# Alembic
+alembic/versions/__pycache__/
+
+# VSCode and IDE files
+.vscode/
+.idea/
+*.swp
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Test output
+*.pytest_cache/
+
+# Logs
+*.log 

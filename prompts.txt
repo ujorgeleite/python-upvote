@@ -1,0 +1,52 @@
+We need to build Feature Voting System – Let users post a feature and upvote othersa project together: Feature Voting System – Let users post a feature and upvote others
+
+In that project include build the complete architecture for:
+
+Database (postgres)
+backend api (python)
+frontend ui: Android
+
+We have just 90 minutes for todo it.
+
+What is your suggestion for this ? 
+
+Lets get started withe the python code including the migrations for create all schema for the database and using all api key or secret key from env file! 
+
+yes proceed with fastapi backend setup and api implementation 
+
+Would you like to proceed with testing the API 
+
+create a make file with the relevante commands 
+
+insert a default user in the table to enable to get a toke from login 
+
+Now I want that the backend code be organized in spearated concerns folders and the files be splitted by by business domains for each route and I want unit tests for all functionalities with a command to run all on make file, in those tests the database should be mocked. 
+
+To ensure this project runs successfully on the first try, follow these steps:
+
+1. Install all dependencies:
+   pip install -r requirements.txt
+
+2. Run database migrations:
+   make migrate
+
+3. (Optional) Seed a default user for login testing:
+   make seed
+
+4. Run the FastAPI backend:
+   make run
+
+5. To run all tests (with database mocked):
+   make test
+
+Key fixes and requirements since the last prompt:
+- The backend is now modularized by domain (users, features, votes, auth, core).
+- All routers are included in backend/main.py, including the /token endpoint for OAuth2 login.
+- The /token endpoint is implemented in backend/auth/routes.py and returns a JWT token on successful login.
+- All test dependencies are mocked using FastAPI's dependency_overrides to ensure tests do not touch the real database.
+- The test client uses the correct form encoding for OAuth2 login.
+- All mock user objects in tests provide required fields for response validation.
+- The Makefile includes commands for install, run, migrate, seed, and test.
+- requirements.txt includes all necessary dependencies for development and testing.
+
+With these steps and fixes, a new user can clone the repo, install dependencies, run migrations, and immediately run the app and tests successfully. 
